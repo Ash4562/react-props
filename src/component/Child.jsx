@@ -5,7 +5,7 @@ const Child = (demo) => {
     
     
   return<>
-  <p> this is child component</p>
+  <p className="bg-blue-600"> this is child component</p>
     <h1>name : {demo.name}</h1>
     <h1>Age : {demo.age}</h1>
     <h1>Address : {demo.address}</h1>
