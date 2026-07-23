@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
 
 const UseStateSS = () => {
-    const [count,setCount] = useState(0)
-    console.log("count",count);
+    const [number,setCount] = useState(0)
+
+
+    const [name,setName]= useState({
+      
+    })
+    console.log("count",number);
     
   return <>
   <div>
-    <h1>{count}</h1>
-<button onClick={()=> setCount (count + 1)}>+</button><hr />
-<button onClick={()=> setCount (count - 1)}>-</button>
+    <h1>{number}</h1>
+<button onClick={()=> setCount (number + 1)}>+</button><hr />
+<button onClick={()=> setCount (number - 1)}>-</button>
   </div>
   </>
 }
