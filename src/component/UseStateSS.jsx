@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const UseStateSS = () => {
     const [number,setCount] = useState(0)
@@ -7,7 +7,12 @@ const UseStateSS = () => {
     const [name,setName]= useState({
       
     })
-    console.log("count",number);
+    // console.log("count",number);
+
+    useEffect(()=>{
+      console.log("useeffect call");
+      
+    },[number])
     
   return <>
   <div>
