@@ -1,13 +1,25 @@
-import Child from "./component/Child"
-import UseState from "./component/UseState";
-import UseStateSS from "./component/UseStateSS";
+import React from 'react'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import Navbar from './pages/Navbar'
+import Footer from './pages/Footer'
+
 const App = () => {
- 
-  return <>
-  <h1> this is Parent component</h1>
-{/* <Child name="John"  age='25' roll='101' address="123 Main St" /> */}
-<UseState/>
-{/* <UseStateSS/> */}
+  return<>
+<BrowserRouter>
+{/* <Navbar /> */}
+<Routes>
+<Route path="/" element={<Home />} />
+<Route path="/about" element={<About />} />
+<Route path="/contact" element={<Contact />} />
+<Route path="*" element={<NotFound />} />
+</Routes>
+{/* <Footer/> */}
+</BrowserRouter>
   </>
 }
-export default App; 
+
+export default App
